@@ -10,3 +10,4 @@ def new_team1(request):
     return render(request,'new_team1.html')
 
  
+

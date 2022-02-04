@@ -1,69 +1,109 @@
-{% extends 'index.html' %} {% load static %} {% block content %}
-
+{%extends 'index.html'%} {% load static %} {% block content %}
 <div class="content-wrapper">
-  <div class="page-header">
-    <h3 class="page-title">CREATE TEAM</h3>
-  </div>
-  <div class="row">
-    <div class="col-md-6 grid-margin stretch-card">
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">CREATE TEAM</h4>
+    <div class="row">
 
-          <div class="template-demo">
-            <button type="button" class="btn btn-social-icon-text bg-success" style="width=100vh">
-             <i
-                class="mdi mdi-account-multiple-plus"              
-              ></i>
-            <a  href="/new_team1/"> Create Team </a>
-            </button>
-             </div>
-            {% comment %} <button type="button" class="btn btn-social-icon btn-outline-info">
-              <i
-                class="mdi mdi-account-multiple-plus"
-                href="new_team1.html"
-              ></i>
-            </button> 
-          </div>{% endcomment %}
-           
-          
+        <!-- <button type="submit" class="btn btn-primary me-2">Submit</button>
+          <button class="btn btn-dark">Cancel</button> -->
+
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card" style="height: 340px">
+                <a href="/new_team1" style="text-decoration: none">
+                    <div class="card-body">
+                        <h1 class="card-title" style="margin-top: 50px">
+                            Create Team &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i class="mdi mdi-account-supervisor text-danger text-danger" style="font-size: 70px"></i>
+                        </h1>
+                    </div>
+                </a>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="col-md-6 grid-margin stretch-card">
-      <div class="card">
-        <div class="card-body">
-            
-          <h4 class="card-title">Team List</h4>
-          
-          <div class="template-demo">
-            <button type="button" class="btn btn-social-icon-text bg-success">
-                <i
-                  class="mdi mdi-account-card-details"
-                  href="/new_team1/"
-                ></i
-                >Team List
-              </button>
-            <ul class="list-group list-group-flush bg-secondary">
-                <li class="list-group-item bg-bg-gradient-info">First item</li>
-                <li class="list-group-item bg-gradient-bg-dark">Second item</li>
-                <li class="list-group-item">Third item</li>
-                <li class="list-group-item">Fourth item</li>
-              </ul>
-              <button type="button" class="btn btn-social-icon-text bg-success">Update</button>
-              <button type="button" class="btn btn-social-icon-text bg-danger" onclick="confirmation()">Delete</button>
-             </div>
+
+        <div class="col-md-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="page-header">
+                        <h3 class="page-title">Team List</h3>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-responsive">
+                            <thead>
+                                <tr>
+                                    <th class="text-white">Team List</th>
+                                    <th class="text-white" style="padding-left:70px; font-weight: 800;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="#" style="text-decoration: none; color: #6c7293">
+                    Herman Beck
+                  </a>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-social-icon-text bg-success">
+                                          <i class="mdi mdi-tooltip-edit "></i>
+                    Update
+                  </button>
+                                        <button type="button" class="btn btn-social-icon-text bg-danger" onclick="confirmation()">
+                                          <i class="mdi mdi-delete-forever "></i>
+                    Delete
+                  </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="#" style="text-decoration: none; color: #6c7293">
+                    Herman Beck
+                  </a>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-social-icon-text bg-success">
+                                          <i class="mdi mdi-tooltip-edit "></i>
+                    Update
+                  </button>
+                                        <button type="button" class="btn btn-social-icon-text bg-danger" onclick="confirmation()">
+                                          <i class="mdi mdi-delete-forever "></i>
+                                          Delete
+                  </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="#" style="text-decoration: none; color: #6c7293">
+                    Herman Beck
+                  </a>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-social-icon-text bg-success">
+                                          <i class="mdi mdi-tooltip-edit "></i>
+                    
+                  </button>
+                                        <button type="button" class="btn btn-social-icon-text bg-danger" onclick="confirmation()">
+                                          <i class="mdi mdi-delete-forever "></i>
+                                         
+                  </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+
+
     </div>
-  </div>
 </div>
-<script>
-    function confirmation(){
+
+<!-- <script>
+    function confirmation() {
         var result = confirm("Are you sure to delete?");
-        if(result){
+        if (result) {
             // Delete logic goes here
         }
     }
-</script>
+</script> -->
 {% endblock %}
