@@ -8,6 +8,6 @@ def new_team(request):
     return render(request,'new_team.html')
 def new_team1(request):
     return render(request,'new_team1.html')
-
- 
+def team_update(request):
+    return render(request,'team_update.html')
 

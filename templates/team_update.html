@@ -1,40 +1,25 @@
 {%extends 'index.html'%} {% load static %} {% block content %}
 
 <div class="content-wrapper">
-    <!-- {% comment %}
-  <div class="page-header">
-    <h3 class="page-title">Typography</h3>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">UI Elements</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Typography</li>
-      </ol>
-    </nav>
-  </div>
-  {% endcomment %} -->
-
     <div class="row">
         <div class="col-md-6 grid-margin stretch-card">
-            <div class="card" style="height: 280px">
+            <div class="card" style="height: 320px">
                 <div class="card-body">
-                    <!-- <h3 class="card-title" style="margin-top: 50px">
-              Select Trainer </h3> -->
-
                     <div class="dropdown">
                         <label style="font-size: large; margin-top: 50px">Select Trainer</label
-            >
+            >&nbsp;&nbsp;&nbsp;&nbsp;
             <button
-              class="btn btn-success dropdown-toggle"
+              class="btn btn-outline-primary dropdown-toggle pt-2"
               type="button"
               id="dropdownMenuIconButton2"
               data-bs-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
             >
-              <i class="mdi mdi-account-multiple-plus"></i>
+              <i class="mdi mdi-account-multiple-plus p-2" style="font-size: larger;"></i>
             </button>
             <div
-              class="dropdown-menu"
+              class="dropdown-menu "
               aria-labelledby="dropdownMenuIconButton2"
             >
               <h6 class="dropdown-header">Trainers</h6>
@@ -57,49 +42,24 @@
               />
             </div>
           </div>
-          <!-- <i
-                class="mdi mdi-account-supervisor text-danger text-danger"
-                style="font-size: 70px"
-              ></i> --><br />
+          <br />
           <div class="row">
             <div class="col-sm-5"></div>
             <div class="col-sm-7" class="pull-right">
               <button
                 type="Submit"
-                class="btn btn-outline-success btn-icon-text"
-              >
-                Submit
+                class="btn btn-outline-primary btn-icon-text"
+                onclick="redirect()"> <i class="mdi mdi-refresh btn-icon-prepend"></i>
+                Update
               </button>
             </div>
           </div>
-          <!-- {% comment %}
-          <div class="text-right">
-            <button
-              type="button"
-              onclick="redirect()"
-              class="btn btn-outline-success btn-icon-text"
-            >
-              <i class="mdi mdi-file-check btn-icon-prepend"></i> Submit
-            </button>
-            <button
-              type="submit"
-              onclick="redirect()"
-              class="btn btn-success me-2"
-              style="align-items: center"
-            >
-              Submit
-            </button>
-            {% endcomment %} -->
-            <!-- <button class="btn btn-dark">Cancel</button>  -->
+         
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<script>
-  function redirect() {
-    window.location.href = "/new_team";
-  }
-</script>
+
+
 {%endblock%}
